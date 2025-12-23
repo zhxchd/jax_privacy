@@ -50,7 +50,6 @@ def get_config() -> ml_collections.ConfigDict:
           dp=experiment_config.DPConfig(
               delta=1e-5,
               clipping_norm=1.0,
-              stop_training_at_epsilon=1.0,
               rescale_to_unit_norm=True,
               auto_tune='num_updates',
               stop_training_at_epsilon=0.0030317898626983737,
