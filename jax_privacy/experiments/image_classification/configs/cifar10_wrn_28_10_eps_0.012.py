@@ -13,8 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Training a WRN-16-4 on CIFAR-10 with (1.0, 1e-5)-DP."""
-
 from jax_privacy.experiments import image_data
 from jax_privacy.experiments.image_classification import config_base
 from jax_privacy.src.training import experiment_config
@@ -22,8 +20,7 @@ from jax_privacy.src.training import optimizer_config
 import ml_collections
 
 
-def get_config(epsilon) -> ml_collections.ConfigDict:
-  """Experiment config."""
+def get_config() -> ml_collections.ConfigDict:
 
   config = config_base.ExperimentConfig(
       num_updates=875,
@@ -56,7 +53,7 @@ def get_config(epsilon) -> ml_collections.ConfigDict:
               stop_training_at_epsilon=1.0,
               rescale_to_unit_norm=True,
               auto_tune='num_updates',
-              stop_training_at_epsilon=epsilon,
+              stop_training_at_epsilon=0.012187266063339098,
           ),
           logging=experiment_config.LoggingConfig(
               grad_clipping=True,
