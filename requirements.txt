@@ -3,7 +3,7 @@ dill
 dm-haiku
 jax==0.4.13
 jaxlib==0.4.13
-jaxline @ git+https://github.com/deepmind/jaxline.git
+jaxline @ git+https://github.com/deepmind/jaxline.git@f1503f6a06d46aa9eb2eab8eed6130895148ffa2
 ml_collections
 numpy
 optax

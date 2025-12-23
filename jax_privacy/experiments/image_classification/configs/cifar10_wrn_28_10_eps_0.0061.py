@@ -51,7 +51,8 @@ def get_config() -> ml_collections.ConfigDict:
               delta=1e-5,
               clipping_norm=1.0,
               rescale_to_unit_norm=True,
-              auto_tune='num_updates',
+              noise_multiplier=None,
+              auto_tune='noise_multiplier',
               stop_training_at_epsilon=0.006083590485623323,
           ),
           logging=experiment_config.LoggingConfig(
